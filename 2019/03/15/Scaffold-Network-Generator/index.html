@@ -102,25 +102,25 @@
 <meta name="keywords" content="cheminformatics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scaffold network generator">
-<meta property="og:url" content="https://blog.jach4.com/2019/03/15/Scaffold-network-generator/index.html">
+<meta property="og:url" content="https://blog.jach.vip/2019/03/15/Scaffold-Network-Generator/index.html">
 <meta property="og:site_name" content="Jach">
 <meta property="og:description" content="Scaffold Network GeneratorRepoGithub Usage123git clone git@github.com:jach4/scaffold_network_generator.git sngcd sngpython scaffolds_output.py --np=50 --file_input=data/datasets/input.smi --scaffolds_">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://blog.jach4.com/2019/03/15/Scaffold-network-generator/output_3_1.png">
-<meta property="og:image" content="https://blog.jach4.com/2019/03/15/Scaffold-network-generator/output_6_0.png">
-<meta property="og:image" content="https://blog.jach4.com/2019/03/15/Scaffold-network-generator/output_9_0.png">
-<meta property="og:updated_time" content="2019-03-15T07:41:32.830Z">
+<meta property="og:image" content="https://blog.jach.vip/2019/03/15/Scaffold-Network-Generator/output_3_1.png">
+<meta property="og:image" content="https://blog.jach.vip/2019/03/15/Scaffold-Network-Generator/output_6_0.png">
+<meta property="og:image" content="https://blog.jach.vip/2019/03/15/Scaffold-Network-Generator/output_9_0.png">
+<meta property="og:updated_time" content="2019-03-15T07:52:25.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scaffold network generator">
 <meta name="twitter:description" content="Scaffold Network GeneratorRepoGithub Usage123git clone git@github.com:jach4/scaffold_network_generator.git sngcd sngpython scaffolds_output.py --np=50 --file_input=data/datasets/input.smi --scaffolds_">
-<meta name="twitter:image" content="https://blog.jach4.com/2019/03/15/Scaffold-network-generator/output_3_1.png">
+<meta name="twitter:image" content="https://blog.jach.vip/2019/03/15/Scaffold-Network-Generator/output_3_1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.jach4.com/2019/03/15/Scaffold-network-generator/">
+  <link rel="canonical" href="https://blog.jach.vip/2019/03/15/Scaffold-Network-Generator/">
 
 
 
@@ -346,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.jach4.com/2019/03/15/Scaffold-network-generator/">
+    <link itemprop="mainEntityOfPage" href="https://blog.jach.vip/2019/03/15/Scaffold-Network-Generator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jach">
@@ -389,7 +389,7 @@
                 
               
 
-              <time title="Created: 2019-03-15 15:31:29 / Modified: 15:41:32" itemprop="dateCreated datePublished" datetime="2019-03-15T15:31:29+08:00">2019-03-15</time>
+              <time title="Created: 2019-03-15 15:31:29 / Modified: 15:52:25" itemprop="dateCreated datePublished" datetime="2019-03-15T15:31:29+08:00">2019-03-15</time>
             
 
             
@@ -452,14 +452,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">402344</span><br></pre></td></tr></table></figure>
 <h3 id="Get-the-1990th-scaffold"><a href="#Get-the-1990th-scaffold" class="headerlink" title="Get the 1990th scaffold"></a>Get the 1990th scaffold</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(scaffold_smiles_idx(<span class="number">1990</span>))</span><br><span class="line">Chem.MolFromSmiles(scaffold_smiles_idx(<span class="number">1990</span>))</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c1n[nH]nc1-c1nnc(-c2cnns2)o1</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/15/Scaffold-network-generator/output_3_1.png" alt="png"></p>
+<p><img src="/2019/03/15/Scaffold-Network-Generator/output_3_1.png" alt="png"></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic.smiles_scaffold[scaffold_smiles_idx(<span class="number">1990</span>)]</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">dic_mol_atoms &#123;</span><br><span class="line">  idx_mol: 111921</span><br><span class="line">  ls_atom &#123;</span><br><span class="line">    idx_atom: 1</span><br><span class="line">    idx_atom: 2</span><br><span class="line">    idx_atom: 3</span><br><span class="line">    idx_atom: 10</span><br><span class="line">    idx_atom: 11</span><br><span class="line">    idx_atom: 12</span><br><span class="line">    idx_atom: 13</span><br><span class="line">    idx_atom: 14</span><br><span class="line">    idx_atom: 15</span><br><span class="line">    idx_atom: 16</span><br><span class="line">    idx_atom: 17</span><br><span class="line">    idx_atom: 18</span><br><span class="line">    idx_atom: 19</span><br><span class="line">    idx_atom: 20</span><br><span class="line">    idx_atom: 22</span><br><span class="line">  &#125;</span><br><span class="line">  ls_nh &#123;</span><br><span class="line">    idx_atom: 3</span><br><span class="line">  &#125;</span><br><span class="line">  ls_np &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="The-111-921th-molecule-containing-the-6th-scaffold"><a href="#The-111-921th-molecule-containing-the-6th-scaffold" class="headerlink" title="The 111,921th molecule containing the 6th scaffold"></a>The 111,921th molecule containing the 6th scaffold</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chem.MolFromSmiles(smiles_from_line(<span class="number">111921</span>))</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/15/Scaffold-network-generator/output_6_0.png" alt="png"></p>
+<p><img src="/2019/03/15/Scaffold-Network-Generator/output_6_0.png" alt="png"></p>
 <h3 id="Get-the-scaffold-network-of-The-111-921th-molecule"><a href="#Get-the-scaffold-network-of-The-111-921th-molecule" class="headerlink" title="Get the scaffold network of The 111,921th molecule"></a>Get the scaffold network of The 111,921th molecule</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scaffold_list = get_mol_graph(smiles_from_line(<span class="number">111921</span>)).ls_mol_from_sng_u()</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Draw.MolsToGridImage(scaffold_list)</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/15/Scaffold-network-generator/output_9_0.png" alt="png"></p>
+<p><img src="/2019/03/15/Scaffold-Network-Generator/output_9_0.png" alt="png"></p>
 
       
     </div>
