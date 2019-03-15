@@ -338,6 +338,180 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jach">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jach">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/03/15/Scaffold-Network-Generator/" class="post-title-link" itemprop="url">Scaffold Network Generator</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-15 15:24:23 / Modified: 15:26:54" itemprop="dateCreated datePublished" datetime="2019-03-15T15:24:23+08:00">2019-03-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Scaffold-Network-Generator"><a href="#Scaffold-Network-Generator" class="headerlink" title="Scaffold Network Generator"></a>Scaffold Network Generator</h1><h2 id="Repo"><a href="#Repo" class="headerlink" title="Repo"></a>Repo</h2><p><a href="https://github.com/jach4/scaffold_network_generator" target="_blank" rel="noopener">Github</a></p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:jach4/scaffold_network_generator.git sng</span><br><span class="line"><span class="built_in">cd</span> sng</span><br><span class="line">python scaffolds_output.py --np=50 --file_input=data/datasets/input.smi --scaffolds_output=data/datasets/scaffolds.smi --file_output=data/datasets/scaffolds.bin</span><br></pre></td></tr></table></figure>
+<h2 id="Read-the-entire-scaffold-message-from-a-file"><a href="#Read-the-entire-scaffold-message-from-a-file" class="headerlink" title="Read the entire scaffold message from a file"></a>Read the entire scaffold message from a file</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> data <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> rdkit <span class="keyword">import</span> Chem</span><br><span class="line"><span class="keyword">from</span> rdkit.Chem <span class="keyword">import</span> Draw</span><br><span class="line"><span class="keyword">from</span> rdkit.Chem.Draw <span class="keyword">import</span> IPythonConsole</span><br><span class="line"></span><br><span class="line">dic = DicSmScaffoldLs()</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data/datasets/scaffolds.bin'</span>,<span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    dic.ParseFromString(f.read())</span><br><span class="line">    </span><br><span class="line">print(len(dic.smiles_scaffold))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">402344</span><br></pre></td></tr></table></figure>
+<h3 id="Get-the-1990th-scaffold"><a href="#Get-the-1990th-scaffold" class="headerlink" title="Get the 1990th scaffold"></a>Get the 1990th scaffold</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(scaffold_smiles_idx(<span class="number">1990</span>))</span><br><span class="line">Chem.MolFromSmiles(scaffold_smiles_idx(<span class="number">1990</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c1n[nH]nc1-c1nnc(-c2cnns2)o1</span><br></pre></td></tr></table></figure>
+<p><img src="images-Scaffold-Network-Generator/output_3_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic.smiles_scaffold[scaffold_smiles_idx(<span class="number">1990</span>)]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">dic_mol_atoms &#123;</span><br><span class="line">  idx_mol: 111921</span><br><span class="line">  ls_atom &#123;</span><br><span class="line">    idx_atom: 1</span><br><span class="line">    idx_atom: 2</span><br><span class="line">    idx_atom: 3</span><br><span class="line">    idx_atom: 10</span><br><span class="line">    idx_atom: 11</span><br><span class="line">    idx_atom: 12</span><br><span class="line">    idx_atom: 13</span><br><span class="line">    idx_atom: 14</span><br><span class="line">    idx_atom: 15</span><br><span class="line">    idx_atom: 16</span><br><span class="line">    idx_atom: 17</span><br><span class="line">    idx_atom: 18</span><br><span class="line">    idx_atom: 19</span><br><span class="line">    idx_atom: 20</span><br><span class="line">    idx_atom: 22</span><br><span class="line">  &#125;</span><br><span class="line">  ls_nh &#123;</span><br><span class="line">    idx_atom: 3</span><br><span class="line">  &#125;</span><br><span class="line">  ls_np &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="The-111-921th-molecule-containing-the-6th-scaffold"><a href="#The-111-921th-molecule-containing-the-6th-scaffold" class="headerlink" title="The 111,921th molecule containing the 6th scaffold"></a>The 111,921th molecule containing the 6th scaffold</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chem.MolFromSmiles(smiles_from_line(<span class="number">111921</span>))</span><br></pre></td></tr></table></figure>
+<p><img src="images-Scaffold-Network-Generator/output_6_0.png" alt="png"></p>
+<h3 id="Get-the-scaffold-network-of-The-111-921th-molecule"><a href="#Get-the-scaffold-network-of-The-111-921th-molecule" class="headerlink" title="Get the scaffold network of The 111,921th molecule"></a>Get the scaffold network of The 111,921th molecule</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scaffold_list = get_mol_graph(smiles_from_line(<span class="number">111921</span>)).ls_mol_from_sng_u()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Draw.MolsToGridImage(scaffold_list)</span><br></pre></td></tr></table></figure>
+<p><img src="images-Scaffold-Network-Generator/output_9_0.png" alt="png"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://blog.jach4.com/2019/03/13/My-1st-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -540,7 +714,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -580,7 +754,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>

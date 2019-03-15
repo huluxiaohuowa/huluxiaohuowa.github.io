@@ -98,25 +98,29 @@
 
 
 
-  <meta name="description" content="12345678910# to save a pytorch modeldef save_model(model, version, state, epoch, log_file_obj):    t = time.strftime(&apos;%Y%m%d%H%M%S&apos;, time.localtime(time.time()))    torch.save(model.state_dict(), &quot;./c">
-<meta name="keywords" content="pytorch,model">
+  <meta name="description" content="Scaffold Network GeneratorRepoGithub Usage123git clone git@github.com:jach4/scaffold_network_generator.git sngcd sngpython scaffolds_output.py --np=50 --file_input=data/datasets/input.smi --scaffolds_">
+<meta name="keywords" content="cheminformatics">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My 1st blog">
-<meta property="og:url" content="https://blog.jach4.com/2019/03/13/My-1st-blog/index.html">
+<meta property="og:title" content="Scaffold Network Generator">
+<meta property="og:url" content="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/index.html">
 <meta property="og:site_name" content="Jach">
-<meta property="og:description" content="12345678910# to save a pytorch modeldef save_model(model, version, state, epoch, log_file_obj):    t = time.strftime(&apos;%Y%m%d%H%M%S&apos;, time.localtime(time.time()))    torch.save(model.state_dict(), &quot;./c">
+<meta property="og:description" content="Scaffold Network GeneratorRepoGithub Usage123git clone git@github.com:jach4/scaffold_network_generator.git sngcd sngpython scaffolds_output.py --np=50 --file_input=data/datasets/input.smi --scaffolds_">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-15T04:09:13.483Z">
+<meta property="og:image" content="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/images-Scaffold-Network-Generator/output_3_1.png">
+<meta property="og:image" content="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/images-Scaffold-Network-Generator/output_6_0.png">
+<meta property="og:image" content="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/images-Scaffold-Network-Generator/output_9_0.png">
+<meta property="og:updated_time" content="2019-03-15T07:26:54.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My 1st blog">
-<meta name="twitter:description" content="12345678910# to save a pytorch modeldef save_model(model, version, state, epoch, log_file_obj):    t = time.strftime(&apos;%Y%m%d%H%M%S&apos;, time.localtime(time.time()))    torch.save(model.state_dict(), &quot;./c">
+<meta name="twitter:title" content="Scaffold Network Generator">
+<meta name="twitter:description" content="Scaffold Network GeneratorRepoGithub Usage123git clone git@github.com:jach4/scaffold_network_generator.git sngcd sngpython scaffolds_output.py --np=50 --file_input=data/datasets/input.smi --scaffolds_">
+<meta name="twitter:image" content="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/images-Scaffold-Network-Generator/output_3_1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.jach4.com/2019/03/13/My-1st-blog/">
+  <link rel="canonical" href="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/">
 
 
 
@@ -126,7 +130,7 @@
   };
 </script>
 
-  <title>My 1st blog | Jach</title>
+  <title>Scaffold Network Generator | Jach</title>
   
 
 
@@ -342,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.jach4.com/2019/03/13/My-1st-blog/">
+    <link itemprop="mainEntityOfPage" href="https://blog.jach4.com/2019/03/15/Scaffold-Network-Generator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jach">
@@ -359,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">My 1st blog
+          <h1 class="post-title" itemprop="name headline">Scaffold Network Generator
 
               
             
@@ -385,24 +389,12 @@
                 
               
 
-              <time title="Created: 2019-03-13 16:22:08" itemprop="dateCreated datePublished" datetime="2019-03-13T16:22:08+08:00">2019-03-13</time>
+              <time title="Created: 2019-03-15 15:24:23 / Modified: 15:26:54" itemprop="dateCreated datePublished" datetime="2019-03-15T15:24:23+08:00">2019-03-15</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-03-15 12:09:13" itemprop="dateModified" datetime="2019-03-15T12:09:13+08:00">2019-03-15</time>
               
             
           </span>
@@ -454,7 +446,20 @@
       
 
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># to save a pytorch model</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_model</span><span class="params">(model, version, state, epoch, log_file_obj)</span>:</span></span><br><span class="line">    t = time.strftime(<span class="string">'%Y%m%d%H%M%S'</span>, time.localtime(time.time()))</span><br><span class="line">    torch.save(model.state_dict(), <span class="string">"./checkpoint/ForceFieldFeatNet&#123;&#125;_Epoch&#123;&#125;_&#123;&#125;_&#123;&#125;.pt"</span>.format(version, str(epoch), state, t))</span><br><span class="line">    log = <span class="string">'Checkpoint Saved at '</span> + t + <span class="string">'.'</span></span><br><span class="line">    print(log)</span><br><span class="line">    log_file_obj.write(log + <span class="string">'\n'</span>)</span><br><span class="line">    log_file_obj.flush()</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'training.log'</span>, <span class="string">'a'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    save(model, version, <span class="string">'checkpoint'</span>, epoch_l, f)</span><br></pre></td></tr></table></figure>
+        <h1 id="Scaffold-Network-Generator"><a href="#Scaffold-Network-Generator" class="headerlink" title="Scaffold Network Generator"></a>Scaffold Network Generator</h1><h2 id="Repo"><a href="#Repo" class="headerlink" title="Repo"></a>Repo</h2><p><a href="https://github.com/jach4/scaffold_network_generator" target="_blank" rel="noopener">Github</a></p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:jach4/scaffold_network_generator.git sng</span><br><span class="line"><span class="built_in">cd</span> sng</span><br><span class="line">python scaffolds_output.py --np=50 --file_input=data/datasets/input.smi --scaffolds_output=data/datasets/scaffolds.smi --file_output=data/datasets/scaffolds.bin</span><br></pre></td></tr></table></figure>
+<h2 id="Read-the-entire-scaffold-message-from-a-file"><a href="#Read-the-entire-scaffold-message-from-a-file" class="headerlink" title="Read the entire scaffold message from a file"></a>Read the entire scaffold message from a file</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> data <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> rdkit <span class="keyword">import</span> Chem</span><br><span class="line"><span class="keyword">from</span> rdkit.Chem <span class="keyword">import</span> Draw</span><br><span class="line"><span class="keyword">from</span> rdkit.Chem.Draw <span class="keyword">import</span> IPythonConsole</span><br><span class="line"></span><br><span class="line">dic = DicSmScaffoldLs()</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'data/datasets/scaffolds.bin'</span>,<span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    dic.ParseFromString(f.read())</span><br><span class="line">    </span><br><span class="line">print(len(dic.smiles_scaffold))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">402344</span><br></pre></td></tr></table></figure>
+<h3 id="Get-the-1990th-scaffold"><a href="#Get-the-1990th-scaffold" class="headerlink" title="Get the 1990th scaffold"></a>Get the 1990th scaffold</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(scaffold_smiles_idx(<span class="number">1990</span>))</span><br><span class="line">Chem.MolFromSmiles(scaffold_smiles_idx(<span class="number">1990</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c1n[nH]nc1-c1nnc(-c2cnns2)o1</span><br></pre></td></tr></table></figure>
+<p><img src="images-Scaffold-Network-Generator/output_3_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dic.smiles_scaffold[scaffold_smiles_idx(<span class="number">1990</span>)]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">dic_mol_atoms &#123;</span><br><span class="line">  idx_mol: 111921</span><br><span class="line">  ls_atom &#123;</span><br><span class="line">    idx_atom: 1</span><br><span class="line">    idx_atom: 2</span><br><span class="line">    idx_atom: 3</span><br><span class="line">    idx_atom: 10</span><br><span class="line">    idx_atom: 11</span><br><span class="line">    idx_atom: 12</span><br><span class="line">    idx_atom: 13</span><br><span class="line">    idx_atom: 14</span><br><span class="line">    idx_atom: 15</span><br><span class="line">    idx_atom: 16</span><br><span class="line">    idx_atom: 17</span><br><span class="line">    idx_atom: 18</span><br><span class="line">    idx_atom: 19</span><br><span class="line">    idx_atom: 20</span><br><span class="line">    idx_atom: 22</span><br><span class="line">  &#125;</span><br><span class="line">  ls_nh &#123;</span><br><span class="line">    idx_atom: 3</span><br><span class="line">  &#125;</span><br><span class="line">  ls_np &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="The-111-921th-molecule-containing-the-6th-scaffold"><a href="#The-111-921th-molecule-containing-the-6th-scaffold" class="headerlink" title="The 111,921th molecule containing the 6th scaffold"></a>The 111,921th molecule containing the 6th scaffold</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chem.MolFromSmiles(smiles_from_line(<span class="number">111921</span>))</span><br></pre></td></tr></table></figure>
+<p><img src="images-Scaffold-Network-Generator/output_6_0.png" alt="png"></p>
+<h3 id="Get-the-scaffold-network-of-The-111-921th-molecule"><a href="#Get-the-scaffold-network-of-The-111-921th-molecule" class="headerlink" title="Get the scaffold network of The 111,921th molecule"></a>Get the scaffold network of The 111,921th molecule</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scaffold_list = get_mol_graph(smiles_from_line(<span class="number">111921</span>)).ls_mol_from_sng_u()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Draw.MolsToGridImage(scaffold_list)</span><br></pre></td></tr></table></figure>
+<p><img src="images-Scaffold-Network-Generator/output_9_0.png" alt="png"></p>
 
       
     </div>
@@ -478,9 +483,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/pytorch/" rel="tag"># pytorch</a>
-          
-            <a href="/tags/model/" rel="tag"># model</a>
+            <a href="/tags/cheminformatics/" rel="tag"># cheminformatics</a>
           
         </div>
       
@@ -493,15 +496,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/13/My-1st-blog/" rel="next" title="My 1st blog">
+                <i class="fa fa-chevron-left"></i> My 1st blog
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/15/Scaffold-Network-Generator/" rel="prev" title="Scaffold Network Generator">
-                Scaffold Network Generator <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -545,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -680,6 +692,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Scaffold-Network-Generator"><span class="nav-number">1.</span> <span class="nav-text">Scaffold Network Generator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Repo"><span class="nav-number">1.1.</span> <span class="nav-text">Repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage"><span class="nav-number">1.2.</span> <span class="nav-text">Usage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Read-the-entire-scaffold-message-from-a-file"><span class="nav-number">1.3.</span> <span class="nav-text">Read the entire scaffold message from a file</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-the-1990th-scaffold"><span class="nav-number">1.3.1.</span> <span class="nav-text">Get the 1990th scaffold</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-111-921th-molecule-containing-the-6th-scaffold"><span class="nav-number">1.3.2.</span> <span class="nav-text">The 111,921th molecule containing the 6th scaffold</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-the-scaffold-network-of-The-111-921th-molecule"><span class="nav-number">1.3.3.</span> <span class="nav-text">Get the scaffold network of The 111,921th molecule</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
