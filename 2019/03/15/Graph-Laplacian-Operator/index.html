@@ -16,7 +16,7 @@
 
 <html class="theme-next muse use-motion" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -98,25 +98,25 @@
 
 
 
-  <meta name="description" content="Graph Laplacian OperatorLet L be the Laplacian operator Let $f(x,y)$ be$$L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0}$$ Then Laplace equation refers">
+  <meta name="description" content="Graph Laplacian Operator Let L be the Laplacian operator Let \(f(x,y)\) be \[ L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0} \] Then Laplace equat">
 <meta name="keywords" content="graph">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Graph Laplacian Operator">
-<meta property="og:url" content="https://blog.jach4.com/2019/03/15/Graph-Laplacian-Operator/index.html">
+<meta property="og:url" content="https://blog.jach.vip/2019/03/15/Graph-Laplacian-Operator/index.html">
 <meta property="og:site_name" content="Jach">
-<meta property="og:description" content="Graph Laplacian OperatorLet L be the Laplacian operator Let $f(x,y)$ be$$L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0}$$ Then Laplace equation refers">
+<meta property="og:description" content="Graph Laplacian Operator Let L be the Laplacian operator Let \(f(x,y)\) be \[ L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0} \] Then Laplace equat">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-15T09:58:27.543Z">
+<meta property="og:updated_time" content="2019-03-15T10:17:40.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Graph Laplacian Operator">
-<meta name="twitter:description" content="Graph Laplacian OperatorLet L be the Laplacian operator Let $f(x,y)$ be$$L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0}$$ Then Laplace equation refers">
+<meta name="twitter:description" content="Graph Laplacian Operator Let L be the Laplacian operator Let \(f(x,y)\) be \[ L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0} \] Then Laplace equat">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.jach4.com/2019/03/15/Graph-Laplacian-Operator/">
+  <link rel="canonical" href="https://blog.jach.vip/2019/03/15/Graph-Laplacian-Operator/">
 
 
 
@@ -163,7 +163,7 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -174,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -342,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.jach4.com/2019/03/15/Graph-Laplacian-Operator/">
+    <link itemprop="mainEntityOfPage" href="https://blog.jach.vip/2019/03/15/Graph-Laplacian-Operator/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jach">
@@ -385,7 +385,7 @@
                 
               
 
-              <time title="Created: 2019-03-15 16:56:48 / Modified: 17:58:27" itemprop="dateCreated datePublished" datetime="2019-03-15T16:56:48+08:00">2019-03-15</time>
+              <time title="Created: 2019-03-15 16:56:48 / Modified: 18:17:40" itemprop="dateCreated datePublished" datetime="2019-03-15T16:56:48+08:00">2019-03-15</time>
             
 
             
@@ -442,13 +442,34 @@
       
 
       
-        <h1 id="Graph-Laplacian-Operator"><a href="#Graph-Laplacian-Operator" class="headerlink" title="Graph Laplacian Operator"></a>Graph Laplacian Operator</h1><p>Let L be the Laplacian operator</p>
-<p>Let $f(x,y)$ be<br>$$<br>L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0}<br>$$</p>
-<p>Then Laplace equation refers to $Lf=0$, thus<br>$$<br>\frac{\partial^2 f(x,y)}{\partial x^2}+\frac{\partial^2f(x,y)}{\partial y^2}=0 \tag{1}<br>$$<br>A function satisfies formula(1) is called Harmonic function. Then lets discretize this function.</p>
-<p>Assume $f$ is  a real function on $\mathbb{Z}$,  let’s define $f’$ a function on $\mathbb{Z}+\frac{1}{2}$, and $f’(\frac{1}{2}+n)=f(n+1)-f(n)$, eg. $f’(\frac{1}{2})=f(1)-f(0)$. Then the second-order differential becomes a function on $\mathbb{Z}$, and $f’’(n)=f(n+1)+f(n-1)-2f(n)$.</p>
-<p>Considering 2-D situation, define $f$ a function on $\mathbb{Z}^2$, and formula (1) becomes:<br>$$<br>f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)=0 \tag{2}<br>$$<br>Formula (2) demonstrates the value of $f$ on $(x,y)$ equals to average value of 4 points around $(x,y)$. Then we spread the  conception to simple undirected graphs.</p>
-<p>Define a simple undirected graph $G=(V,E)$, whose adjacency matrix is $A$ and degree matrix is $D$. The let $L=D-A$. Define $f$ a function on $V$, and the value of f on each node equals to the average value of nodes connected directly with this node, thus<br>$$<br>\forall v\in V,<br>f(v)=\frac{1}{\left|N(v)\right|}\sum_{u\in N(v)}f(u) \tag{3}<br>$$<br>among which $N(v)={u\in V|uv \in E}$</p>
-<p>We can consider $f$ a vector on  $\mathbb{R}^n$, still written as $f$.<br>$$<br>V={v_1, v_2, \ldots,v_n} \<br>\<br>f = \begin{pmatrix}<br>f(v_1)\<br>f(v_2)\<br>\vdots\<br>f(v_n)<br>\end{pmatrix} \tag{4}<br>$$<br>We can transform the condition a vector form:<br>$$<br>(D-A)f=0 \Rightarrow Lf=0 \tag{5}<br>$$</p>
+        <h1 id="graph-laplacian-operator">Graph Laplacian Operator</h1>
+<p>Let L be the Laplacian operator</p>
+<p>Let <span class="math inline">\(f(x,y)\)</span> be <span class="math display">\[
+L: f \Longrightarrow \frac{\partial^2 f}{\partial x^2}+\frac{\partial^2 f}{\partial y^2}\tag{0}
+\]</span></p>
+<p>Then Laplace equation refers to <span class="math inline">\(Lf=0\)</span>, thus <span class="math display">\[
+\frac{\partial^2 f(x,y)}{\partial x^2}+\frac{\partial^2f(x,y)}{\partial y^2}=0 \tag{1}
+\]</span> A function satisfies formula(1) is called Harmonic function. Then lets discretize this function.</p>
+<p>Assume <span class="math inline">\(f\)</span> is a real function on <span class="math inline">\(\mathbb{Z}\)</span>, let's define <span class="math inline">\(f&#39;\)</span> a function on <span class="math inline">\(\mathbb{Z}+\frac{1}{2}\)</span>, and <span class="math inline">\(f&#39;(\frac{1}{2}+n)=f(n+1)-f(n)\)</span>, eg. <span class="math inline">\(f&#39;(\frac{1}{2})=f(1)-f(0)\)</span>. Then the second-order differential becomes a function on <span class="math inline">\(\mathbb{Z}\)</span>, and <span class="math inline">\(f&#39;&#39;(n)=f(n+1)+f(n-1)-2f(n)\)</span>.</p>
+<p>Considering 2-D situation, define <span class="math inline">\(f\)</span> a function on <span class="math inline">\(\mathbb{Z}^2\)</span>, and formula (1) becomes: <span class="math display">\[
+f(x+1,y)+f(x-1,y)+f(x,y+1)+f(x,y-1)-4f(x,y)=0 \tag{2}
+\]</span> Formula (2) demonstrates the value of <span class="math inline">\(f\)</span> on <span class="math inline">\((x,y)\)</span> equals to average value of 4 points around <span class="math inline">\((x,y)\)</span>. Then we spread the conception to simple undirected graphs.</p>
+<p>Define a simple undirected graph <span class="math inline">\(G=(V,E)\)</span>, whose adjacency matrix is <span class="math inline">\(A\)</span> and degree matrix is <span class="math inline">\(D\)</span>. The let <span class="math inline">\(L=D-A\)</span>. Define <span class="math inline">\(f\)</span> a function on <span class="math inline">\(V\)</span>, and the value of f on each node equals to the average value of nodes connected directly with this node, thus <span class="math display">\[
+\forall v\in V,
+f(v)=\frac{1}{\left|N(v)\right|}\sum_{u\in N(v)}f(u) \tag{3}
+\]</span> among which <span class="math inline">\(N(v)=\{u\in V|uv \in E\}\)</span></p>
+<p>We can consider <span class="math inline">\(f\)</span> a vector on <span class="math inline">\(\mathbb{R}^n\)</span>, still written as <span class="math inline">\(f\)</span>. <span class="math display">\[
+V={v_1, v_2, \ldots,v_n} \\ 
+\\
+f = \begin{pmatrix}
+f(v_1)\\
+f(v_2)\\
+\vdots\\
+f(v_n)
+\end{pmatrix} \tag{4}
+\]</span> We can transform the condition a vector form: <span class="math display">\[
+(D-A)f=0 \Rightarrow Lf=0 \tag{5}
+\]</span></p>
 
       
     </div>
@@ -696,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Graph-Laplacian-Operator"><span class="nav-number">1.</span> <span class="nav-text">Graph Laplacian Operator</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#graph-laplacian-operator"><span class="nav-number">1.</span> <span class="nav-text">Graph Laplacian Operator</span></a></li></ol></div>
             
 
           </div>
@@ -863,6 +884,53 @@
   
 
   
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    
+  
+
 
   
 
